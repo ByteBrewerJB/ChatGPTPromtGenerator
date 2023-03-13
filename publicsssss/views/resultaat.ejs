@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultaat</title>
+</head>
+<body>
+    <p><%= resultaat %></p>
+    <button onclick="copyText()">Kopiëren</button>
+
+    <script>
+        function copyText() {
+            const textarea = document.createElement('textarea');
+            textarea.value = '<%= resultaat %>';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+    </script>
+</body>
+</html>

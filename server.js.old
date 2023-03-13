@@ -1,0 +1,33 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const ejs = require('ejs');
+const fs = require('fs');
+
+const app = express();
+
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', (req, res) => {
+    fs.readFile('velden.json', (err, data) => {
+        if (err) throw err;
+        const velden = JSON.parse(data);
+        res.render('index', { velden });
+    });
+});
+
+app.post('/resultaat', (req, res) => {
+    const veld1 = req.body.veld1;
+    const veld2 = req.body.veld2;
+    const veld3 = req.body.veld3;
+    const veld4 = req.body.veld4;
+
+    const resultaat = `Je hebt ${veld1}, ${veld2}, ${veld3} en ${veld4} gekozen.`;
+
+    res.render('resultaat', { resultaat });
+});
+
+app.listen(3000, () => {
+    console.log('Server gestart op poort 3000');
+});

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Velden kiezen</title>
+</head>
+<body>
+    <form method="post" action="/resultaat">
+        <label for="veld1">Veld 1:</label>
+        <select name="veld1" id="veld1">
+            <% Object.keys(velden).forEach(function(key) { %>
+                <option value="<%= velden[key] %>"><%= velden[key] %></option>
+            <% }); %>
+        </select>
+        <br>
+
+        <label for="veld2">Veld 2:</label>
+        <select name="veld2" id="veld2">
+            <% Object.keys(velden).forEach(function(key) { %>
+                <option value="<%= velden[key] %>"><%= velden[key] %></option>
+            <% }); %>
+        </select>
+        <br>
+
+        <label for="veld3">Veld 3:</label>
+        <select name="veld3" id="veld3">
+            <% Object.keys(velden).forEach(function(key) { %>
+                <option value="<%= velden[key] %>"><%= velden[key] %></option>
+            <% }); %>
+        </select>
+        <br>
+
+        <label for="veld4">Veld 4:</label>
+        <select name="veld4" id="veld4">
+            <% Object.keys(velden).forEach(function(key) { %>
+                <option value="<%= velden[key] %>"><%= velden[key] %></option>
+            <% }); %>
+        </select>
+        <br>
+
+        <button type="submit">Kopiëren</button>
+    </form>
+</body>
+</html>
+
+
+

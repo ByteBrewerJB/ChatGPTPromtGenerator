@@ -1,0 +1,13 @@
+{
+    "animals": [
+      { "name": "Dog", "sound": "Woof!" },
+      { "name": "Cat", "sound": "Meow!" },
+      { "name": "Cow", "sound": "Moo!" },
+      { "name": "Pig", "sound": "Oink!" },
+      { "name": "Sheep", "sound": "Baa!" },
+      { "name": "Duck", "sound": "Quack!" },
+      { "name": "Horse", "sound": "Neigh!" },
+      { "name": "Rooster", "sound": "Cock-a-doodle-doo!" }
+    ]
+  }
+  

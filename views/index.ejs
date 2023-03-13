@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Keuzemenu</title>
+  </head>
+  <body>
+    <h1>Keuzemenu</h1>
+    <form method="POST" action="/result">
+      <label for="color">Kleur:</label>
+      <select id="color" name="color">
+        <% colors.forEach(color => { %>
+          <option value="<%= color.code %>"><%= color.name %></option>
+        <% }) %>
+      </select>
+      <br>
+      <label for="animal">Dier:</label>
+      <select id="animal" name="animal">
+        <% animals.forEach(animal => { %>
+          <option value="<%= animal.sound %>"><%= animal.name %></option>
+        <% }) %>
+      </select>
+      <br>
+      <input type="submit" value="Genereren">
+    </form>
+  </body>
+</html>
